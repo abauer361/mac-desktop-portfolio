@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: mac-bold;
+  src: url("../fonts/sf-pro-display-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: mac;
+  src: url("../fonts/sf-pro-display.woff2") format("woff2");
+}
+
+.font-mac {
+  font-family: mac, system-ui, sans-serif;
+}
+
+.font-mac-bold {
+  font-family: mac-bold, system-ui, sans-serif;
+}
+
+:root {
+  font-family: mac, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(0, 0, 0);
+  background-image: url("./images/wallpapers/sequoia_bg_light.jpg");
+  background-size: cover;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #000000;
+    background-image: url("./images/wallpapers/sequoia_bg_dark.jpg");
+    background-size: cover;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
