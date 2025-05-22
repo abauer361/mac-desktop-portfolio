@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { spotify, safari, email } from "./images/app_icons";
 import "./App.css";
 import "./index.css";
 import MenuBar from "./components/MenuBar";
@@ -7,8 +5,6 @@ import Dock from "./components/Dock";
 import Desktop from "./components/Desktop";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <MenuBar />

@@ -30,7 +30,7 @@ const MenuBar = () => {
   });
 
   return (
-    <header className="fixed top-0 left-0 right-0 h-7 font-mac bg-neutral-50 flex px-4 shadow-sm z-50">
+    <header className="fixed top-0 left-0 right-0 h-7 font-mac bg-neutral-50 flex px-4 shadow-sm z-50 select-none">
       <div className="flex items-center flex-row space-x-4">
         <img src={appleLogo} alt="Apple Logo" />
         <span className="font-mac-bold ">Portfolio</span>
