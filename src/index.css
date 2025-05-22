@@ -29,6 +29,10 @@
   color: rgb(0, 0, 0);
   background-image: url("./images/wallpapers/sequoia_bg_light.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,6 +50,9 @@ h1 {
     color: #000000;
     background-image: url("./images/wallpapers/sequoia_bg_dark.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   a:hover {
     color: #747bff;

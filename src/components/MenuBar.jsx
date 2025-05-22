@@ -1,11 +1,11 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import {
   appleLogo,
   contact,
   notifications,
   search,
   wifi,
-} from "../images/menu_items";
+} from "../images/menu_items"; //imports from index.js in the menu_items folder
 
 const MenuBar = () => {
   const [currentTime, setCurrentTime] = useState(new Date());

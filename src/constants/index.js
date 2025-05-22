@@ -1,14 +1,15 @@
+// This is where we save add new apps, they will automatically
+// be exported to the dock and desktop depending on where you add them
 import {
   contacts,
   email,
   finder,
+  github,
   map,
   notes,
   photos,
   safari,
   spotify,
-  terminal,
-  trashcan,
   vsc,
 } from "../images/app_icons";
 
@@ -48,5 +49,28 @@ export const dockerApps = [
   {
     photo: vsc,
     label: "VS Code",
+  },
+];
+
+export const desktopApps = [
+  {
+    photo: safari,
+    label: "Safari",
+  },
+  {
+    photo: finder,
+    label: "About Andrew",
+  },
+  {
+    photo: email,
+    label: "Contact Me",
+  },
+  {
+    photo: github,
+    label: "My Github",
+  },
+  {
+    photo: spotify,
+    label: "Spotify",
   },
 ];

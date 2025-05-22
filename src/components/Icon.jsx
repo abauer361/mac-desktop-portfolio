@@ -6,7 +6,7 @@ const Icon = ({ iconURL, label }) => {
       <button className="w-[64px] h-[64px] hover:scale-110 transition-transform bg-transparent">
         <img src={iconURL} alt={label} className="w-full h-full" />
       </button>
-      <span className="text-white font-mac-bold">{label}</span>
+      <span className="text-white font-mac-bold text-xs">{label}</span>
     </div>
   );
 };
