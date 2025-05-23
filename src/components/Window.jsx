@@ -3,10 +3,11 @@ import close from "../images/window_controls/close.png";
 import closeX from "../images/window_controls/closeX.png";
 
 const Window = ({ isOpen, title, onClose }) => {
-  const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [position, setPosition] = useState({ x: 200, y: 100 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [windowSize, setWindowSize] = useState({ width: 1000, height: 500 });
   const windowRef = useRef(null);
 
   if (!isOpen) return null;
@@ -27,10 +28,14 @@ const Window = ({ isOpen, title, onClose }) => {
 
   const handleMouseMove = (e) => {
     if (isDragging) {
-      setPosition({
-        x: e.clientX - dragOffset.x,
-        y: e.clientY - dragOffset.y,
-      });
+      const newY = e.clientY - dragOffset.y;
+      // Only allow dragging if the new Y position is at or below the navbar (25px)
+      if (newY >= 25) {
+        setPosition({
+          x: e.clientX - dragOffset.x,
+          y: newY,
+        });
+      }
     }
   };
 
@@ -60,13 +65,14 @@ const Window = ({ isOpen, title, onClose }) => {
       style={{
         left: position.x,
         top: position.y,
-        width: "300px",
-        height: "200px",
+        width: windowSize.width,
+        height: windowSize.height,
         cursor: isDragging ? "grabbing" : "default",
       }}
     >
+      <section className="absolute topSizer w-full cursor-n-resize bg-transparent h-[2px] border-blue-500 border-2" />
       <div
-        className="title-bar bg-gray-200 p-2 rounded-t-lg flex items-center"
+        className="title-bar bg-gray-200 p-2 rounded-t-lg flex items-center h-9"
         onMouseDown={handleMouseDown}
       >
         <button
@@ -83,18 +89,17 @@ const Window = ({ isOpen, title, onClose }) => {
           </span>
         </div>
       </div>
-      <div className="p-4 flex items-center justify-center h-[calc(100%-40px)]">
+      <section className="absolute leftSizer border-purple-500 border-2 w-[2px] h-[calc(100%)] -translate-x-1 -translate-y-9 cursor-w-resize" />
+      <div className="p-4 flex screen items-center justify-center h-[calc(100%-40px)] border-red-500 border-2">
         <p className="text-lg">hello world</p>
+      </div>
+      <section className="absolute rightSizer right-0 border-orange-500 border-2 w-[2px] h-[calc(100%)] cursor-w-resize" />
+      <div className="flex relative">
+        <section className="absolute bottomSizer border-green-500 border-2 h-2.5 w-[calc(100%-10px)] -translate-y-0.5 cursor-s-resize" />
+        <section className="absolute cornerSizer right-0 border-yellow-500 border-2 h-[14px] w-[13px] -translate-y-1.5 translate-x-0.5 cursor-nwse-resize" />
       </div>
     </div>
   );
 };
-
-/*
-    TO DO------------
-    Make windows only draggable to menu bar
-    Make windows closable
-    Be able to resize windows
-*/
 
 export default Window;
