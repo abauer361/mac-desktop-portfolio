@@ -89,14 +89,14 @@ const Window = ({ isOpen, title, onClose }) => {
           </span>
         </div>
       </div>
-      <section className="absolute leftSizer border-purple-500 border-2 w-[2px] h-[calc(100%)] -translate-x-1 -translate-y-9 cursor-w-resize" />
-      <div className="p-4 flex screen items-center justify-center h-[calc(100%-40px)] border-red-500 border-2">
-        <p className="text-lg">hello world</p>
-      </div>
-      <section className="absolute rightSizer right-0 border-orange-500 border-2 w-[2px] h-[calc(100%)] cursor-w-resize" />
-      <div className="flex relative">
-        <section className="absolute bottomSizer border-green-500 border-2 h-2.5 w-[calc(100%-10px)] -translate-y-0.5 cursor-s-resize" />
-        <section className="absolute cornerSizer right-0 border-yellow-500 border-2 h-[14px] w-[13px] -translate-y-1.5 translate-x-0.5 cursor-nwse-resize" />
+      <div className="flex-1 flex flex-col h-full">
+        <section className="absolute leftSizer border-purple-500 border-2 w-[2px] h-[calc(100%)] -translate-x-1 -translate-y-9 cursor-w-resize" />
+        <div className="p-4 w-full flex screen items-center justify-center h-[calc(100%-40px)] border-red-500 border-2">
+          <p className="text-lg">hello world</p>
+        </div>
+        <section className="absolute rightSizer right-0 border-orange-500 border-2 w-[2px] h-[calc(100%-8px)] cursor-e-resize -translate-y-9" />
+        <section className="absolute bottomSizer -bottom-1 border-green-500 border-2 h-2.5 w-[calc(100%-10px)] -translate-y-0.5 cursor-s-resize" />
+        <section className="absolute cornerSizer -bottom-2.5 right-0 border-yellow-500 border-2 h-[14px] w-[13px] -translate-y-1.5 translate-x-0.5 cursor-nwse-resize" />
       </div>
     </div>
   );
