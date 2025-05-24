@@ -12,7 +12,7 @@ const Window = ({ isOpen, title, onClose }) => {
 
   if (!isOpen) return null;
 
-  const handleMouseDown = (e) => {
+  const handleBarClick = (e) => {
     if (
       e.target.className.includes("title-bar") ||
       e.target.className.includes("title-text")
@@ -26,7 +26,7 @@ const Window = ({ isOpen, title, onClose }) => {
     }
   };
 
-  const handleMouseMove = (e) => {
+  const handleBarMove = (e) => {
     if (isDragging) {
       const newY = e.clientY - dragOffset.y;
       // Only allow dragging if the new Y position is at or below the navbar (25px)
@@ -39,7 +39,7 @@ const Window = ({ isOpen, title, onClose }) => {
     }
   };
 
-  const handleMouseUp = () => {
+  const handleBarUnclick = () => {
     setIsDragging(false);
   };
 
@@ -49,12 +49,12 @@ const Window = ({ isOpen, title, onClose }) => {
 
   React.useEffect(() => {
     if (isDragging) {
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("mouseup", handleMouseUp);
+      window.addEventListener("mousemove", handleBarMove);
+      window.addEventListener("mouseup", handleBarUnclick);
     }
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("mousemove", handleBarMove);
+      window.removeEventListener("mouseup", handleBarUnclick);
     };
   }, [isDragging]);
 
@@ -73,7 +73,7 @@ const Window = ({ isOpen, title, onClose }) => {
       <section className="absolute topSizer w-full cursor-n-resize bg-transparent h-[2px] border-blue-500 border-2" />
       <div
         className="title-bar bg-gray-200 p-2 rounded-t-lg flex items-center h-9"
-        onMouseDown={handleMouseDown}
+        onMouseDown={handleBarClick}
       >
         <button
           onClick={closeWindow}
