@@ -1,19 +1,20 @@
 import React, { useState, useRef } from "react";
 import close from "../images/window_controls/close.png";
 import closeX from "../images/window_controls/closeX.png";
+// @ts-ignore
+import Spotify from "./apps/Spotify";
 
 const Window = ({ isOpen, title, onClose }) => {
   const [position, setPosition] = useState({ x: 200, y: 100 });
   const [isDraggingBar, setIsDraggingBar] = useState(false);
   const [dragBarOffset, setDragBarOffset] = useState({ x: 0, y: 0 });
   const [isResizing, setIsResizing] = useState(false);
-  const [resizingOffset, setResizingOffset] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 1000, height: 500 });
-  const windowRef = useRef(null);
   const [activeSizer, setActiveSizer] = useState(null);
+  const windowRef = useRef(null);
 
-  if (!isOpen) return null;
+  console.log("Window component rendering, isOpen:", isOpen); // Add this line
 
   //-------------------------------- HANDLE RESIZE FUNCTIONALITY HERE ----------------------------------------------------
   const handleResize = (e) => {
@@ -24,10 +25,6 @@ const Window = ({ isOpen, title, onClose }) => {
       .find((className) => className.includes("Sizer"))
       .replace("Sizer", "");
     setActiveSizer(sizerType);
-    setResizingOffset({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
   };
 
   React.useEffect(() => {
@@ -174,6 +171,8 @@ const Window = ({ isOpen, title, onClose }) => {
     onClose();
   };
 
+  if (!isOpen) return null;
+
   return (
     <div
       ref={windowRef}
@@ -187,7 +186,7 @@ const Window = ({ isOpen, title, onClose }) => {
       }}
     >
       <section
-        className="absolute topSizer w-full cursor-n-resize bg-transparent h-[2px] border-blue-500 border-2"
+        className="absolute topSizer w-full cursor-n-resize bg-transparent h-[2px] rounded"
         onMouseDown={handleResize}
       />
       <div
@@ -210,22 +209,22 @@ const Window = ({ isOpen, title, onClose }) => {
       </div>
       <div className="flex-1 flex flex-col h-full">
         <section
-          className="absolute leftSizer border-purple-500 border-2 w-[2px] h-[calc(100%)] -translate-x-1 -translate-y-9 cursor-w-resize"
+          className="absolute leftSizer bg-gray-200 border-2 w-[10px] h-[calc(100%)] -translate-x-1 -translate-y-9 cursor-w-resize rounded"
           onMouseDown={handleResize}
         />
-        <div className="p-4 w-full flex screen items-center justify-center h-[calc(100%-40px)] border-red-500 border-2">
-          <p className="text-lg">hello world</p>
+        <div className="w-full flex screenSection items-center justify-center h-[calc(100%-40px)]">
+          <Spotify />
         </div>
         <section
-          className="absolute rightSizer right-0 border-orange-500 border-2 w-[2px] h-[calc(100%-8px)] cursor-e-resize -translate-y-9"
+          className="absolute rightSizer bg-gray-200 right-0 w-[10px] h-[calc(100%-8px)] cursor-e-resize -translate-y-9 rounded"
           onMouseDown={handleResize}
         />
         <section
-          className="absolute bottomSizer -bottom-1 border-green-500 border-2 h-2.5 w-[calc(100%-10px)] -translate-y-0.5 cursor-s-resize"
+          className="absolute bottomSizer -bottom-1 bg-gray-200 h-2.5 w-[calc(100%-5px)] -translate-x-0.5 -translate-y-0.5 cursor-s-resize rounded"
           onMouseDown={handleResize}
         />
         <section
-          className="absolute cornerSizer -bottom-2.5 right-0 border-yellow-500 border-2 h-[14px] w-[13px] -translate-y-1.5 translate-x-0.5 cursor-nwse-resize"
+          className="absolute cornerSizer -bottom-2.5 right-0 bg-gray-200 border-2 h-[14px] w-[13px] -translate-y-2 translate-x-[1px] cursor-nwse-resize rounded"
           onMouseDown={handleResize}
         />
       </div>

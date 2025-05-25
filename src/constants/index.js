@@ -1,5 +1,7 @@
-// This is where we save add new apps, they will automatically
+// This is where we add new apps, they will automatically
 // be exported to the dock and desktop depending on where you add them
+// Make sure to add an icon within app_icons
+
 import {
   contacts,
   email,
