@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
 import close from "../images/window_controls/close.png";
 import closeX from "../images/window_controls/closeX.png";
-// @ts-ignore
-import Spotify from "./apps/Spotify";
+import Screen from "./Screen";
 
 const Window = ({ isOpen, title, onClose }) => {
   const [position, setPosition] = useState({ x: 200, y: 100 });
@@ -213,7 +212,7 @@ const Window = ({ isOpen, title, onClose }) => {
           onMouseDown={handleResize}
         />
         <div className="w-full flex screenSection items-center justify-center h-[calc(100%-40px)]">
-          <Spotify />
+          <Screen app={title} />
         </div>
         <section
           className="absolute rightSizer bg-gray-200 right-0 w-[10px] h-[calc(100%-8px)] cursor-e-resize -translate-y-9 rounded"
