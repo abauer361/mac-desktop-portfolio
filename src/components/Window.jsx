@@ -208,10 +208,10 @@ const Window = ({ isOpen, title, onClose }) => {
       </div>
       <div className="flex-1 flex flex-col h-full">
         <section
-          className="absolute leftSizer bg-gray-200 border-2 w-[10px] h-[calc(100%)] -translate-x-1 -translate-y-9 cursor-w-resize rounded"
+          className="absolute leftSizer bg-gray-200 w-[10px] h-[calc(100%)] -translate-x-[2px] -translate-y-[37px] cursor-w-resize rounded"
           onMouseDown={handleResize}
         />
-        <div className="w-full flex screenSection items-center justify-center h-[calc(100%-40px)]">
+        <div className="w-[calc(100%-18px)] flex screenSection items-center justify-center h-[calc(100%-40px)] translate-x-2">
           <Screen app={title} />
         </div>
         <section
@@ -223,7 +223,7 @@ const Window = ({ isOpen, title, onClose }) => {
           onMouseDown={handleResize}
         />
         <section
-          className="absolute cornerSizer -bottom-2.5 right-0 bg-gray-200 border-2 h-[14px] w-[13px] -translate-y-2 translate-x-[1px] cursor-nwse-resize rounded"
+          className="absolute cornerSizer -bottom-2.5 right-0 bg-gray-200 h-[14px] w-[12px] -translate-y-2 translate-x-[1px] cursor-nwse-resize rounded"
           onMouseDown={handleResize}
         />
       </div>
