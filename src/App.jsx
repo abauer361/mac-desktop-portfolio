@@ -3,8 +3,16 @@ import "./index.css";
 import MenuBar from "./components/MenuBar";
 import Dock from "./components/Dock";
 import Desktop from "./components/Desktop";
+import MobileWarning from "./components/MobileWarning.jsx";
+import { useIsMobile } from "./hooks/useIsMobile";
 
 function App() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return <MobileWarning />;
+  }
+
   return (
     <>
       <MenuBar />

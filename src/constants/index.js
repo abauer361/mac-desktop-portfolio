@@ -68,11 +68,21 @@ export const desktopApps = [
     label: "Contact Me",
   },
   {
+    photo: vsc,
+    label: "VS Code",
+  },
+
+  {
     photo: github,
     label: "My Github",
+    externalLink: "https://github.com/abauer361",
   },
   {
     photo: spotify,
     label: "Spotify",
+  },
+  {
+    photo: map,
+    label: "Map",
   },
 ];

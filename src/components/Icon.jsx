@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import Window from "./Window";
 
-const Icon = ({ iconURL, label }) => {
+const Icon = ({ iconURL, label, externalLink }) => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
 
   const handleClick = () => {
-    console.log("Icon clicked:", label);
-    setIsWindowOpen(true);
+    if (externalLink) {
+      window.open(externalLink, "_blank");
+    } else {
+      setIsWindowOpen(true);
+    }
   };
 
   const renderWindow = () => {
-    console.log("isWindowOpen set to:", isWindowOpen);
-    if (isWindowOpen) {
+    if (isWindowOpen && !externalLink) {
       return (
         <Window
           isOpen={isWindowOpen}
@@ -25,13 +27,11 @@ const Icon = ({ iconURL, label }) => {
     return null;
   };
 
-  console.log("Current isWindowOpen state:", isWindowOpen);
-
   return (
     <div className="flex flex-col items-center select-none">
       <button
         onClick={handleClick}
-        className="w-[64px] h-[64px] hover:scale-110 transition-transform bg-transparent "
+        className="w-[64px] h-[64px] hover:scale-110 transition-transform bg-transparent"
       >
         <img
           src={iconURL}
@@ -40,7 +40,24 @@ const Icon = ({ iconURL, label }) => {
           draggable="false"
         />
       </button>
-      <span className="text-white font-mac-bold text-xs drag">{label}</span>
+      <div className="flex items-center gap-1">
+        <span className="text-white font-mac-bold text-xs drag">{label}</span>
+        {externalLink && (
+          <svg
+            className="w-3 h-3 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        )}
+      </div>
       {renderWindow()}
     </div>
   );

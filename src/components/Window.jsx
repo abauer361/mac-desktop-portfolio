@@ -13,7 +13,7 @@ const Window = ({ isOpen, title, onClose }) => {
   const [activeSizer, setActiveSizer] = useState(null);
   const windowRef = useRef(null);
 
-  console.log("Window component rendering, isOpen:", isOpen); // Add this line
+  //console.log("Window component rendering, isOpen:", isOpen); // Add this line
 
   //-------------------------------- HANDLE RESIZE FUNCTIONALITY HERE ----------------------------------------------------
   const handleResize = (e) => {
