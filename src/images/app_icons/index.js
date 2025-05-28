@@ -11,6 +11,7 @@ import spotify from "./spotify.svg";
 import terminal from "./terminal.svg";
 import trashcan from "./trashcan.svg";
 import vsc from "./vsc.svg";
+import nike from "./nike.svg";
 
 export {
   contacts,
@@ -25,4 +26,5 @@ export {
   terminal,
   trashcan,
   vsc,
+  nike,
 };

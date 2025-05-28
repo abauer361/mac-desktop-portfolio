@@ -24,6 +24,8 @@ const Maps = () => {
         <Map
           defaultCenter={{ lat: 37.79638976686472, lng: -122.43365496241384 }}
           defaultZoom={6}
+          minZoom={2}
+          maxZoom={14}
           gestureHandling={"greedy"}
           disableDefaultUI={true}
           mapId={MAP_ID}

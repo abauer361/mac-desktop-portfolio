@@ -13,6 +13,7 @@ import {
   safari,
   spotify,
   vsc,
+  nike,
 } from "../images/app_icons";
 
 export const dockerApps = [
@@ -71,7 +72,6 @@ export const desktopApps = [
     photo: vsc,
     label: "VS Code",
   },
-
   {
     photo: github,
     label: "My Github",
@@ -84,5 +84,9 @@ export const desktopApps = [
   {
     photo: map,
     label: "Map",
+  },
+  {
+    photo: nike,
+    label: "Nike",
   },
 ];
