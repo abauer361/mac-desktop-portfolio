@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/nike/:path*",
-        "destination": "https://nike-website-ecru-eight.vercel.app/:path*"
+        "destination": "https://nike.andrew-bauer.com/"
       }
     ]
   }
