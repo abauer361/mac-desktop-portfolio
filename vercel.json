@@ -4,5 +4,12 @@
         "source": "/nike/:path*",
         "destination": "https://nike.andrew-bauer.com/"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/nike",
+        "destination": "https://nike.andrew-bauer.com",
+        "permanent": true
+      }
     ]
   }
