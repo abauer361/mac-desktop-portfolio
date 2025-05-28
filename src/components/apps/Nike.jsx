@@ -3,7 +3,7 @@ import React from "react";
 const Nike = () => {
   return (
     <iframe
-      src="https://www.andrew-bauer-nike.com/"
+      src="https://nike-website-ecru-eight.vercel.app"
       className="w-full h-full"
     />
   );
