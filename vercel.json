@@ -1,6 +1,10 @@
 {
     "rewrites": [
       {
+        "source": "/nike",
+        "destination": "https://nike-website-ecru-eight.vercel.app"
+      },
+      {
         "source": "/nike/:path*",
         "destination": "https://nike-website-ecru-eight.vercel.app/:path*"
       }
