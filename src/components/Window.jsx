@@ -4,8 +4,11 @@ import closeX from "../images/window_controls/closeX.png";
 import Screen from "./Screen";
 import { topBarNames } from ".";
 
-const Window = ({ isOpen, title, onClose }) => {
-  const [position, setPosition] = useState({ x: 200, y: 100 });
+const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
+  const [position, setPosition] = useState({
+    x: Math.random() * 165 + 35,
+    y: Math.random() * 155 + 65,
+  });
   const [isDraggingBar, setIsDraggingBar] = useState(false);
   const [dragBarOffset, setDragBarOffset] = useState({ x: 0, y: 0 });
   const [isResizing, setIsResizing] = useState(false);
@@ -166,11 +169,6 @@ const Window = ({ isOpen, title, onClose }) => {
     };
   }, [isDraggingBar]);
 
-  //CLOSE FUNCTIONALITY HERE
-  const closeWindow = () => {
-    onClose();
-  };
-
   if (!isOpen) return null;
 
   return (
@@ -183,7 +181,9 @@ const Window = ({ isOpen, title, onClose }) => {
         width: windowSize.width,
         height: windowSize.height,
         cursor: isDraggingBar ? "grabbing" : "default",
+        zIndex: zInd,
       }}
+      onMouseDown={onFocus}
     >
       <section
         className="absolute topSizer w-full cursor-n-resize bg-transparent h-[2px] rounded"
@@ -194,7 +194,7 @@ const Window = ({ isOpen, title, onClose }) => {
         onMouseDown={handleBarClick}
       >
         <button
-          onClick={closeWindow}
+          onClick={onClose}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className="bg-transparent select-none size-3"

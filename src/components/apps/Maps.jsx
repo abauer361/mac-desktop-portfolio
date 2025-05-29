@@ -29,7 +29,7 @@ const Maps = () => {
           disableDefaultUI={true}
           mapId={MAP_ID}
           restriction={{
-            latLngBounds: { north: 85, south: -85 },
+            latLngBounds: { north: 85, south: -85, west: -180, east: 180 },
             strictBounds: true,
           }}
         />

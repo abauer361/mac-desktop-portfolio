@@ -1,15 +1,30 @@
 import React, { useState } from "react";
 import Window from "./Window";
 
+let globalZIndex = 1002;
+
 const Icon = ({ iconURL, label, externalLink }) => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
+  const [windowZIndex, setWindowZIndex] = useState(1002);
+
+  const getNextZIndex = () => {
+    globalZIndex += 1;
+    return globalZIndex;
+  };
 
   const handleDoubleClick = () => {
     if (externalLink) {
       window.open(externalLink, "_blank");
     } else {
+      const newZIndex = getNextZIndex();
+      setWindowZIndex(newZIndex);
       setIsWindowOpen(true);
     }
+  };
+
+  const handleWindowFocus = () => {
+    const newZIndex = getNextZIndex();
+    setWindowZIndex(newZIndex);
   };
 
   const renderWindow = () => {
@@ -21,6 +36,8 @@ const Icon = ({ iconURL, label, externalLink }) => {
           onClose={() => {
             setIsWindowOpen(false);
           }}
+          zInd={windowZIndex}
+          onFocus={handleWindowFocus}
         />
       );
     }
