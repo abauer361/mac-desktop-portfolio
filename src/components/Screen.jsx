@@ -10,7 +10,7 @@ const Screen = ({ app }) => {
       return <Email />;
     case "VS Code":
       return <VSCode />;
-    case "Map":
+    case "Maps":
       return <Map />;
     case "Nike":
       return <Nike />;

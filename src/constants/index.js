@@ -83,7 +83,7 @@ export const desktopApps = [
   },
   {
     photo: map,
-    label: "Map",
+    label: "Maps",
   },
   {
     photo: nike,

@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import close from "../images/window_controls/close.png";
 import closeX from "../images/window_controls/closeX.png";
 import Screen from "./Screen";
+import { topBarNames } from ".";
 
 const Window = ({ isOpen, title, onClose }) => {
   const [position, setPosition] = useState({ x: 200, y: 100 });
@@ -202,7 +203,8 @@ const Window = ({ isOpen, title, onClose }) => {
         </button>
         <div className="flex-1 flex justify-center title-text">
           <span className="text-sm font-medium select-none title-text">
-            {title}
+            {/* If we find something, then x.name else title [find() returns first value when true] */}
+            {topBarNames.find((x) => x.label === title)?.name || title}
           </span>
         </div>
       </div>

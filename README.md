@@ -10,6 +10,7 @@ Add:
 - Build a component in components/apps for the app
 - Include the component in apps/index.js
 - Add to Screen.jsx as an option
+- If you want to change the titleBar name, add it to src/index.js
 
 # When Adding A Location to the Map
 

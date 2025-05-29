@@ -28,6 +28,10 @@ const Maps = () => {
           gestureHandling={"greedy"}
           disableDefaultUI={true}
           mapId={MAP_ID}
+          restriction={{
+            latLngBounds: { north: 85, south: -85 },
+            strictBounds: true,
+          }}
         />
         {markers.map((marker, index) => (
           <AdvancedMarker

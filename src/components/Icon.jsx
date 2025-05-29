@@ -4,7 +4,7 @@ import Window from "./Window";
 const Icon = ({ iconURL, label, externalLink }) => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
 
-  const handleClick = () => {
+  const handleDoubleClick = () => {
     if (externalLink) {
       window.open(externalLink, "_blank");
     } else {
@@ -30,7 +30,7 @@ const Icon = ({ iconURL, label, externalLink }) => {
   return (
     <div className="flex flex-col items-center select-none">
       <button
-        onClick={handleClick}
+        onDoubleClick={handleDoubleClick}
         className="w-[64px] h-[64px] hover:scale-110 transition-transform bg-transparent"
       >
         <img
