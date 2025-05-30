@@ -12,6 +12,7 @@ import terminal from "./terminal.svg";
 import trashcan from "./trashcan.svg";
 import vsc from "./vsc.svg";
 import nike from "./nike.svg";
+import chess from "./chess.png";
 
 export {
   contacts,
@@ -27,4 +28,5 @@ export {
   trashcan,
   vsc,
   nike,
+  chess,
 };

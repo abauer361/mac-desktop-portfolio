@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import { Spotify, Email, VSCode, Map, Nike } from "./apps";
+import { Spotify, Email, VSCode, Map, Nike, Chess } from "./apps";
 
 const Screen = ({ app }) => {
   switch (app) {
@@ -14,6 +14,8 @@ const Screen = ({ app }) => {
       return <Map />;
     case "Nike":
       return <Nike />;
+    case "Chess":
+      return <Chess />;
     default:
       return <div>App has not been created yet!</div>;
   }
