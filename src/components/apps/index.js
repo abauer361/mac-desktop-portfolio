@@ -5,5 +5,8 @@ import VSCode from "./VSCode.jsx";
 import Map from "./Maps.jsx";
 import Nike from "./Nike.jsx";
 import Chess from "./Chess.jsx";
+import Safari from "./Safari.jsx";
+import Andrew from "./About Andrew/Andrew.jsx";
+import Poker from "./Poker.jsx";
 
-export { Spotify, Email, VSCode, Map, Nike, Chess };
+export { Spotify, Email, VSCode, Map, Nike, Chess, Safari, Andrew, Poker };

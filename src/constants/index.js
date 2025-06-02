@@ -15,6 +15,9 @@ import {
   vsc,
   nike,
   chess,
+  terminal,
+  trashcan,
+  poker,
 } from "../images/app_icons";
 
 export const dockerApps = [
@@ -93,5 +96,17 @@ export const desktopApps = [
   {
     photo: chess,
     label: "Chess",
+  },
+  {
+    photo: terminal,
+    label: "Terminal",
+  },
+  {
+    photo: trashcan,
+    label: "Trash",
+  },
+  {
+    photo: poker,
+    label: "Poker",
   },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
 
-// Courtesy of https://play.chessbase.com/
+// Courtesy of https://play.chessbase.com/en/howto/embedfritz
 
 const Chess = () => {
   return (

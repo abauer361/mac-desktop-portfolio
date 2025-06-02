@@ -13,6 +13,7 @@ import trashcan from "./trashcan.svg";
 import vsc from "./vsc.svg";
 import nike from "./nike.svg";
 import chess from "./chess.png";
+import poker from "./poker.png";
 
 export {
   contacts,
@@ -29,4 +30,5 @@ export {
   vsc,
   nike,
   chess,
+  poker,
 };
