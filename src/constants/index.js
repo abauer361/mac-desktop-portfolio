@@ -18,6 +18,7 @@ import {
   terminal,
   trashcan,
   poker,
+  linkedin,
 } from "../images/app_icons";
 
 export const dockerApps = [
@@ -108,5 +109,10 @@ export const desktopApps = [
   {
     photo: poker,
     label: "Poker",
+  },
+  {
+    photo: linkedin,
+    label: "LinkedIn",
+    externalLink: "https://www.linkedin.com/in/andrew-m-bauer/",
   },
 ];

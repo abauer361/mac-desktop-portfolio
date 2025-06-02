@@ -43,8 +43,8 @@ const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
 
   const resizeMove = (e) => {
     if (isResizing) {
-      const MIN_WIDTH = 300;
-      const MIN_HEIGHT = 200;
+      const MIN_WIDTH = 450;
+      const MIN_HEIGHT = 300;
       const MAX_WIDTH = window.innerWidth * 0.95;
       const MAX_HEIGHT = window.innerHeight * 0.8;
       let newY = position.y;
@@ -213,7 +213,7 @@ const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
           className="absolute leftSizer bg-gray-200 w-[10px] h-[calc(100%)] -translate-x-[2px] -translate-y-[37px] cursor-w-resize rounded"
           onMouseDown={handleResize}
         />
-        <div className="w-[calc(100%-18px)] flex screenSection items-center justify-center h-[calc(100%-40px)] translate-x-2">
+        <div className="w-[calc(100%-18px)] flex screenSection items-center justify-center h-[calc(100%-40px)] translate-x-2 overflow-hidden">
           <Screen app={title} />
         </div>
         <section
