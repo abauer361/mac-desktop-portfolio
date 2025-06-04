@@ -10,6 +10,7 @@ import {
   Safari,
   Andrew,
   Poker,
+  Terminal,
 } from "./apps";
 
 const Screen = ({ app }) => {
@@ -32,6 +33,8 @@ const Screen = ({ app }) => {
       return <Andrew />;
     case "Poker":
       return <Poker />;
+    case "Terminal":
+      return <Terminal />;
     default:
       return <div>App has not been created yet!</div>;
   }

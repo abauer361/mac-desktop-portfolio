@@ -12,6 +12,12 @@
     font-family: mac-bold;
     src: url("/fonts/sf-pro-display-bold.woff2") format("woff2");
   }
+
+  @font-face {
+    font-family: deja-vu;
+    src: url("/fonts/DejaVuSansMono.ttf") format("truetype");
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -132,6 +138,29 @@ body {
 
   .font-mac-bold {
     font-family: mac-bold, system-ui, sans-serif;
+  }
+
+  .font-deja-vu {
+    font-family: deja-vu, monospace;
+  }
+
+  .terminal-cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    background-color: #4bd12a;
+    bottom: 0px;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
 }
 
