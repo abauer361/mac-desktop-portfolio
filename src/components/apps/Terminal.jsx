@@ -22,16 +22,17 @@ const Terminal = () => {
       className="bg-black h-full w-full p-2 overflow-y-scroll text-[#4bd12a] font-deja-vu flex flex-col"
       onClick={(e) => inputRef.current.focus()}
     >
-      <div className="w-full flex flex-row">
+      <div className="w-full flex flex-row items-center">
         <p className="mr-2">terminal@andrew-macbook ~ % </p>
-        <input
+        <span
+          contentEditable="true"
+          spellCheck="false"
           ref={inputRef}
-          className="bg-transparent w-[calc(65%)] caret-transparent focus:outline-none cursor-default"
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          className="bg-transparent w-fit min-w-[1ch] caret-transparent cursor-default h-6 leading-6 overflow-hidden whitespace-nowrap focus:outline-none"
+          onInput={(e) => setInput(e.currentTarget.innerText)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
+              e.preventDefault();
               let newOutput = "";
               switch (input) {
                 case "":
@@ -84,9 +85,11 @@ const Terminal = () => {
               }
               setOutput(newOutput + "\n" + output);
               setInput("");
+              e.currentTarget.innerText = "";
             }
           }}
         />
+        <span className="terminal-cursor"></span>
       </div>
       <div
         className="terminal whitespace-pre-line"
