@@ -10,7 +10,7 @@ const Andrew = () => {
 
   return (
     <div className="h-full w-full">
-      <div className="flex flex-row items-start h-[99.1%]">
+      <div className="flex flex-row items-start h-full">
         <div className="bg-white border border-gray-300 py-2 z-50 select-none w-[200px] h-full">
           <div
             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"

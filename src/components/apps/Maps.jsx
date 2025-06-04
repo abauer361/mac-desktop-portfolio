@@ -19,7 +19,7 @@ const Maps = () => {
 
   return (
     <APIProvider apiKey={API_KEY}>
-      <div className="h-[calc(100%-3px)] w-full -translate-y-[2px]">
+      <div className="h-full w-full">
         <Map
           defaultCenter={{ lat: 37.79638976686472, lng: -122.43365496241384 }}
           defaultZoom={6}

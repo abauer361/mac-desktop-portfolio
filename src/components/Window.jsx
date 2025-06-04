@@ -1,3 +1,8 @@
+// Welcome from either GitHub or the VS Code App on my website!
+// This is where the window control functionality is setup/altered
+// You can see the window size, window position, and topbar name
+// are controlled here!
+
 import React, { useState, useRef } from "react";
 import close from "../images/window_controls/close.png";
 import closeX from "../images/window_controls/closeX.png";
@@ -210,10 +215,10 @@ const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
       </div>
       <div className="flex-1 flex flex-col h-full">
         <section
-          className="absolute leftSizer bg-gray-200 w-[10px] h-[calc(100%)] -translate-x-[2px] -translate-y-[37px] cursor-w-resize rounded"
+          className="absolute leftSizer bg-gray-200 w-[10px] h-full -translate-x-[2px] -translate-y-[37px] cursor-w-resize rounded"
           onMouseDown={handleResize}
         />
-        <div className="w-[calc(100%-18px)] flex screenSection items-center justify-center h-[calc(100%-40px)] translate-x-2 overflow-hidden">
+        <div className="w-[calc(100%-18px)] flex screenSection items-center justify-center h-[calc(100%-44px)] translate-x-2 overflow-hidden">
           <Screen app={title} />
         </div>
         <section

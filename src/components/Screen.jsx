@@ -12,6 +12,7 @@ import {
   Poker,
   Terminal,
   Notes,
+  Trash,
 } from "./apps";
 
 const Screen = ({ app }) => {
@@ -38,6 +39,8 @@ const Screen = ({ app }) => {
       return <Terminal />;
     case "Notes":
       return <Notes />;
+    case "Trash":
+      return <Trash />;
     default:
       return <div>App has not been created yet!</div>;
   }
