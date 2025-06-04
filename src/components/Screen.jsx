@@ -11,6 +11,7 @@ import {
   Andrew,
   Poker,
   Terminal,
+  Notes,
 } from "./apps";
 
 const Screen = ({ app }) => {
@@ -35,6 +36,8 @@ const Screen = ({ app }) => {
       return <Poker />;
     case "Terminal":
       return <Terminal />;
+    case "Notes":
+      return <Notes />;
     default:
       return <div>App has not been created yet!</div>;
   }

@@ -9,6 +9,7 @@ import Safari from "./Safari.jsx";
 import Andrew from "./About Andrew/Andrew.jsx";
 import Poker from "./Poker.jsx";
 import Terminal from "./Terminal.jsx";
+import Notes from "./Notes/Notes.jsx";
 
 export {
   Spotify,
@@ -21,4 +22,5 @@ export {
   Andrew,
   Poker,
   Terminal,
+  Notes,
 };

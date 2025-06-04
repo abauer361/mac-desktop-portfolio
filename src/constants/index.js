@@ -115,4 +115,8 @@ export const desktopApps = [
     label: "LinkedIn",
     externalLink: "https://www.linkedin.com/in/andrew-m-bauer/",
   },
+  {
+    photo: notes,
+    label: "Notes",
+  },
 ];
