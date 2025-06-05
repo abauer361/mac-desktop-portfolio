@@ -119,4 +119,12 @@ export const desktopApps = [
     photo: notes,
     label: "Notes",
   },
+  {
+    photo: contacts,
+    label: "Contacts",
+  },
+  {
+    photo: photos,
+    label: "Photos",
+  },
 ];

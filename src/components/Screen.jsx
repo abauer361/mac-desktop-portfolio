@@ -13,6 +13,8 @@ import {
   Terminal,
   Notes,
   Trash,
+  Contacts,
+  Photos,
 } from "./apps";
 
 const Screen = ({ app }) => {
@@ -41,6 +43,10 @@ const Screen = ({ app }) => {
       return <Notes />;
     case "Trash":
       return <Trash />;
+    case "Contacts":
+      return <Contacts />;
+    case "Photos":
+      return <Photos />;
     default:
       return <div>App has not been created yet!</div>;
   }

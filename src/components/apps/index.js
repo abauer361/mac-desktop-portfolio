@@ -10,7 +10,9 @@ import Andrew from "./About Andrew/Andrew.jsx";
 import Poker from "./Poker.jsx";
 import Terminal from "./Terminal.jsx";
 import Notes from "./Notes/Notes.jsx";
-import Trash from "./Trash.jsx";
+import Trash from "./Trash Can/Trash.jsx";
+import Contacts from "./Contacts.jsx";
+import Photos from "./Photos.jsx";
 
 export {
   Spotify,
@@ -25,4 +27,6 @@ export {
   Terminal,
   Notes,
   Trash,
+  Photos,
+  Contacts,
 };
