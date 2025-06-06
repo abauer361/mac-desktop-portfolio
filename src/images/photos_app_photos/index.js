@@ -91,13 +91,13 @@ import image94 from "./image94.jpg";
 import image95 from "./image95.jpg";
 import image96 from "./image96.jpg";
 import image98 from "./image98.jpg";
-import image99 from "./image99.jpg";
 import image100 from "./image100.jpg";
 import image101 from "./image101.jpg";
 import image102 from "./image102.jpg";
 import image103 from "./image103.jpg";
 import image104 from "./image104.jpg";
 import image105 from "./image105.jpg";
+import image106 from "./image106.jpg";
 
 export const photos = [
   image1,
@@ -188,11 +188,11 @@ export const photos = [
   image95,
   image96,
   image98,
-  image99,
   image100,
   image101,
   image102,
   image103,
   image104,
   image105,
+  image106,
 ];

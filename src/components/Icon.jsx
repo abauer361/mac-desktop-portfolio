@@ -3,7 +3,7 @@ import Window from "./Window";
 
 let globalZIndex = 1002;
 
-const Icon = ({ iconURL, label, externalLink }) => {
+const Icon = ({ iconURL, label, externalLink, isLabeled }) => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
   const [windowZIndex, setWindowZIndex] = useState(1002);
 
@@ -58,7 +58,9 @@ const Icon = ({ iconURL, label, externalLink }) => {
         />
       </button>
       <div className="flex items-center gap-1">
-        <span className="text-white font-mac-bold text-xs drag">{label}</span>
+        {isLabeled && (
+          <span className="text-white font-mac-bold text-xs drag">{label}</span>
+        )}
         {externalLink && (
           <svg
             className="w-3 h-3 text-white"

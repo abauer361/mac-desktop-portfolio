@@ -1,6 +1,5 @@
 import React from "react";
 import Icon from "./Icon";
-import { spotify } from "../images/app_icons";
 import { desktopApps } from "../constants";
 import RightClick from "./RightClick";
 
@@ -17,9 +16,9 @@ const Desktop = () => {
           iconURL={app.photo}
           label={app.label}
           externalLink={app.externalLink}
+          isLabeled="true"
         />
       ))}
-      {/*<Icon iconURL={spotify} label="Spotify" />*/}
 
       <RightClick />
     </div>

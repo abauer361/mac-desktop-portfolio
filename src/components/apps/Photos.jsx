@@ -10,8 +10,8 @@ const Photos = () => {
   return (
     <div className="flex w-full h-full p-4 overflow-y-auto">
       <div className="flex flex-row w-full h-full gap-4 items-start flex-wrap">
-        {photos.map((photo) => (
-          <PhotoBox image={photo} />
+        {photos.map((photo, index) => (
+          <PhotoBox image={photo} key={`photo${index + 1}`} />
         ))}
       </div>
     </div>
