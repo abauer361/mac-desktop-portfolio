@@ -1,8 +1,6 @@
 export const help = [
-  "help - Displays a list of helpful commands",
-
-  "ls - Lists files and folders that you can access using in the current directory",
-  "cd - Changes the current directory or file, try: cd socials",
+  "ls - Lists files and folders that you can access using the current directory, try: <i>ls</i>",
+  "cd - Changes the current directory or file, try: <i>cd socials</i>",
   `Learn how to use the terminal: <a href="https://www.terminaltutor.com" target="_blank">https://www.terminaltutor.com</a>`,
 ].join("\n");
 

@@ -65,6 +65,21 @@ const Terminal = () => {
                   newOutput =
                     interests + "\n" + "terminal@andrew-macbook ~ % " + input;
                   break;
+                case "cd nuts":
+                  newOutput =
+                    "Haha, nice." +
+                    "\n" +
+                    "terminal@andrew-macbook ~ % " +
+                    input;
+                  break;
+                case "cd easter egg":
+                  newOutput =
+                    "Honestly didn't think you'd get this far, you look at the source code?" +
+                    "\n" +
+                    "terminal@andrew-macbook ~ % " +
+                    input;
+                  break;
+                case "cd":
                 case "socials":
                 case "languages":
                 case "accomplishments":
@@ -77,7 +92,7 @@ const Terminal = () => {
                   break;
                 default:
                   newOutput =
-                    "Unknown command" +
+                    "Unknown command, try: <i>ls</i>" +
                     "\n" +
                     "terminal@andrew-macbook ~ % " +
                     input;

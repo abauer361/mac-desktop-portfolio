@@ -15,8 +15,6 @@ import {
   vsc,
   nike,
   chess,
-  terminal,
-  trashcan,
   poker,
   linkedin,
 } from "../images/app_icons";
@@ -62,10 +60,6 @@ export const dockerApps = [
 
 export const desktopApps = [
   {
-    photo: safari,
-    label: "Safari",
-  },
-  {
     photo: finder,
     label: "About Andrew",
   },
@@ -74,8 +68,9 @@ export const desktopApps = [
     label: "Contact Me",
   },
   {
-    photo: vsc,
-    label: "VS Code",
+    photo: linkedin,
+    label: "LinkedIn",
+    externalLink: "https://www.linkedin.com/in/andrew-m-bauer/",
   },
   {
     photo: github,
@@ -83,48 +78,15 @@ export const desktopApps = [
     externalLink: "https://github.com/abauer361",
   },
   {
-    photo: spotify,
-    label: "Spotify",
-  },
-  {
-    photo: map,
-    label: "Maps",
-  },
-  {
-    photo: nike,
-    label: "Nike",
-  },
-  {
     photo: chess,
     label: "Chess",
-  },
-  {
-    photo: terminal,
-    label: "Terminal",
-  },
-  {
-    photo: trashcan,
-    label: "Trash",
   },
   {
     photo: poker,
     label: "Poker",
   },
   {
-    photo: linkedin,
-    label: "LinkedIn",
-    externalLink: "https://www.linkedin.com/in/andrew-m-bauer/",
-  },
-  {
-    photo: notes,
-    label: "Notes",
-  },
-  {
-    photo: contacts,
-    label: "Contacts",
-  },
-  {
-    photo: photos,
-    label: "Photos",
+    photo: nike,
+    label: "Nike",
   },
 ];
