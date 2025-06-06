@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import Window from "./Window";
 
 let globalZIndex = 1002;
@@ -29,7 +30,7 @@ const Icon = ({ iconURL, label, externalLink, isLabeled }) => {
 
   const renderWindow = () => {
     if (isWindowOpen && !externalLink) {
-      return (
+      return createPortal(
         <Window
           isOpen={isWindowOpen}
           title={label}
@@ -38,7 +39,8 @@ const Icon = ({ iconURL, label, externalLink, isLabeled }) => {
           }}
           zInd={windowZIndex}
           onFocus={handleWindowFocus}
-        />
+        />,
+        document.body
       );
     }
     return null;
