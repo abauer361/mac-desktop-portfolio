@@ -24,7 +24,7 @@ import {
 export const dockerApps = [
   {
     photo: finder,
-    label: "Finder",
+    label: "About Andrew",
   },
   {
     photo: safari,
@@ -32,11 +32,11 @@ export const dockerApps = [
   },
   {
     photo: email,
-    label: "Email",
+    label: "Contact Me",
   },
   {
     photo: map,
-    label: "Map",
+    label: "Maps",
   },
   {
     photo: photos,

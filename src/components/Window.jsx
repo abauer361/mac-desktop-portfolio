@@ -11,10 +11,8 @@ import { topBarNames } from ".";
 
 const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
   const [position, setPosition] = useState({
-    //x: Math.random() * 165 + 35,
-    //y: Math.random() * 155 + 65,
-    x: 35,
-    y: 35,
+    x: Math.random() * 165 + 35,
+    y: Math.random() * 155 + 65,
   });
   const [isDraggingBar, setIsDraggingBar] = useState(false);
   const [dragBarOffset, setDragBarOffset] = useState({ x: 0, y: 0 });

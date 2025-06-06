@@ -12,8 +12,8 @@ const Dock = () => {
             <Icon key={app.label} iconURL={app.photo} label={app.label} />
           ))}
           <div className="flex mx-2 align-center h-[55px] w-[1px] bg-[#979797]" />
-          <Icon iconURL={terminal} />
-          <Icon iconURL={trashcan} />
+          <Icon iconURL={terminal} label="Terminal" />
+          <Icon iconURL={trashcan} label="Trash" />
         </div>
       </div>
     </div>
