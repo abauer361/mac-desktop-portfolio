@@ -380,6 +380,27 @@ export const markers = [
   {
     position: { lat: 36.95116797428112, lng: -90.15889584119506 },
     title: "Puxico",
-    description: "Family farm ",
+    description: "Family farm",
+  },
+  {
+    position: { lat: 38.895292707045506, lng: -77.03662712400282 },
+    title: "Washington D.C.",
+    description: "Saw all the memorials/monuments",
+  },
+  {
+    position: { lat: 21.276872268263297, lng: -157.82654980062452 },
+    title: "Oahu",
+    description: "Surfed, hiked in knee deep mud",
+    date: "2021",
+  },
+  {
+    position: { lat: 21.47246699744456, lng: -71.14727854076922 },
+    title: "Turks and Caicos Islands",
+    description: "Family cruise, found conch shells",
+  },
+  {
+    position: { lat: 25.042867456305565, lng: -77.34869935387742 },
+    title: "Nassau",
+    description: "Family cruise",
   },
 ];
