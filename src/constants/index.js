@@ -17,6 +17,7 @@ import {
   chess,
   poker,
   linkedin,
+  bland,
 } from "../images/app_icons";
 
 export const dockerApps = [
@@ -88,5 +89,9 @@ export const desktopApps = [
   {
     photo: nike,
     label: "Nike",
+  },
+  {
+    photo: bland,
+    label: "Bland",
   },
 ];

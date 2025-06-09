@@ -13,6 +13,7 @@ import Notes from "./Notes/Notes.jsx";
 import Trash from "./Trash Can/Trash.jsx";
 import Contacts from "./Contacts.jsx";
 import Photos from "./Photos.jsx";
+import Bland from "./Bland.jsx";
 
 export {
   Spotify,
@@ -29,4 +30,5 @@ export {
   Trash,
   Photos,
   Contacts,
+  Bland,
 };

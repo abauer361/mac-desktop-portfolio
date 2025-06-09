@@ -15,6 +15,7 @@ import nike from "./nike.svg";
 import chess from "./chess.png";
 import poker from "./poker.png";
 import linkedin from "./linkedin.png";
+import bland from "./bland.png";
 
 export {
   contacts,
@@ -33,4 +34,5 @@ export {
   chess,
   poker,
   linkedin,
+  bland,
 };

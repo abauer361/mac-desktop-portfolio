@@ -15,6 +15,7 @@ import {
   Trash,
   Contacts,
   Photos,
+  Bland,
 } from "./apps";
 
 const Screen = ({ app }) => {
@@ -47,6 +48,8 @@ const Screen = ({ app }) => {
       return <Contacts />;
     case "Photos":
       return <Photos />;
+    case "Bland":
+      return <Bland />;
     default:
       return <div>App has not been created yet!</div>;
   }

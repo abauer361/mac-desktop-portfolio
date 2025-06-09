@@ -399,8 +399,18 @@ export const markers = [
     description: "Family cruise, found conch shells",
   },
   {
-    position: { lat: 25.042867456305565, lng: -77.34869935387742 },
+    position: { lat: 19.535104911367434, lng: -155.55472913204545 },
     title: "Nassau",
     description: "Family cruise",
+  },
+  {
+    position: { lat: 19.535104911367434, lng: -155.55472913204545 },
+    title: "Kona",
+    description: "Family vacay",
+  },
+  {
+    position: { lat: 20.785785964195842, lng: -156.3252656251989 },
+    title: "Maui",
+    description: "Family vacay",
   },
 ];
