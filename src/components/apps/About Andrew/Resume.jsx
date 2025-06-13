@@ -3,7 +3,7 @@ import resume from "../../../files/andrew_resume.pdf#view=Fit&toolbar=0&statusba
 
 const Resume = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full select-none">
       <iframe
         src={resume}
         title="Andrew Bauer's Resume"

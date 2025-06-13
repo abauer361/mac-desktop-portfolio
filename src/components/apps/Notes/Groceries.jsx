@@ -10,7 +10,9 @@ const Groceries = () => {
         <img src={allicloud} className="mr-auto" />
         <img src={done} />
       </div>
-      <section className="text-2xl ml-4 mt-12">Groceries for Acuka</section>
+      <section className="text-2xl ml-4 mt-12">
+        Groceries for Acuka (Recipe)
+      </section>
       <section className="text-md mt-2 ml-5">
         • 5 tbsp sweet red pepper paste
       </section>

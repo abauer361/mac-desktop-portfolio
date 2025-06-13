@@ -13,7 +13,7 @@ const Icon = ({ iconURL, label, externalLink, isLabeled }) => {
     return globalZIndex;
   };
 
-  const handleDoubleClick = () => {
+  const handleClick = () => {
     if (externalLink) {
       window.open(externalLink, "_blank");
     } else {
@@ -49,7 +49,7 @@ const Icon = ({ iconURL, label, externalLink, isLabeled }) => {
   return (
     <div className="flex flex-col items-center select-none">
       <button
-        onDoubleClick={handleDoubleClick}
+        onClick={handleClick}
         className="w-[64px] h-[64px] hover:scale-110 transition-transform bg-transparent"
       >
         <img

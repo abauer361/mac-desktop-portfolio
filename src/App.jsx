@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <MenuBar />
-      <main className="flex h-[calc(100%-30px)] mt-7 w-full justify-end">
+      <main className="fixed h-[calc(100%-30px)] mt-7 w-full">
         <Desktop />
       </main>
       <section className="fixed bottom-4 left-1/2 -translate-x-1/2 w-full flex justify-center z-0">

@@ -11,7 +11,7 @@ import homeBox from "../../images/misc/homeBox.svg";
 
 const Contacts = () => {
   return (
-    <div className="h-full w-full bg-[#f2f2f7] overflow-y-auto">
+    <div className="h-full w-full bg-[#f2f2f7] overflow-y-auto select-none">
       <img src={back} className="h-[50px] w-[80px]" />
       <div className="flex flex-col align-middle justify-center">
         <section className="w-full h-[150px] flex justify-center">

@@ -10,7 +10,9 @@ const WebsiteNotes = () => {
         <img src={allicloud} className="mr-auto" />
         <img src={done} />
       </div>
-      <section className="text-2xl ml-4 mt-12">Website Notes</section>
+      <section className="text-2xl ml-4 mt-12">
+        Website Notes (Actual Notes)
+      </section>
       <section className="text-md mt-2 ml-5">
         ✓⃝ Mail : Email me: Subject, Your Name/Email, Message
       </section>

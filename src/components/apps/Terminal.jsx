@@ -110,7 +110,13 @@ const Terminal = () => {
         className="terminal whitespace-pre-line"
         dangerouslySetInnerHTML={{ __html: output }}
       />
-      <p>To print available commands, type "help" and press Enter</p>
+      <p>
+        To print available commands, type{" "}
+        <i>
+          <u>help</u>
+        </i>{" "}
+        and press Enter
+      </p>
     </div>
   );
 };

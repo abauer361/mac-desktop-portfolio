@@ -206,7 +206,7 @@ export const markers = [
     position: { lat: 41.28619440804327, lng: -85.78670959803074 },
     title: "Indiana",
     description: "Wondeful family, fishing, tubing, wakeboarding, jetskiing",
-    date: "Plent of Years",
+    date: "2011, 2015, & 2017",
   },
   {
     position: { lat: 31.86503361679775, lng: -116.62932101990967 },
@@ -268,13 +268,13 @@ export const markers = [
   },
   {
     position: { lat: -36.85219878075599, lng: 174.76206407478205 },
-    title: "Aukland",
+    title: "New Zealand: Aukland",
     description: "Family vacay",
     date: "2010",
   },
   {
     position: { lat: -44.626961879247396, lng: 167.88248821514435 },
-    title: "Milford Sound",
+    title: "New Zealand: Milford Sound",
     description: "Family vacay",
     date: "2010",
   },
@@ -381,6 +381,7 @@ export const markers = [
     position: { lat: 36.95116797428112, lng: -90.15889584119506 },
     title: "Puxico",
     description: "Family farm",
+    date: "2006 & 2010",
   },
   {
     position: { lat: 38.895292707045506, lng: -77.03662712400282 },
@@ -397,11 +398,13 @@ export const markers = [
     position: { lat: 21.47246699744456, lng: -71.14727854076922 },
     title: "Turks and Caicos Islands",
     description: "Family cruise, found conch shells",
+    date: "2013",
   },
   {
     position: { lat: 19.535104911367434, lng: -155.55472913204545 },
     title: "Nassau",
     description: "Family cruise",
+    date: "2013",
   },
   {
     position: { lat: 19.535104911367434, lng: -155.55472913204545 },
@@ -412,5 +415,6 @@ export const markers = [
     position: { lat: 20.785785964195842, lng: -156.3252656251989 },
     title: "Maui",
     description: "Family vacay",
+    date: "2005",
   },
 ];
