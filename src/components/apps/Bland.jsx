@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import blandVideo from "../../videos/blanddots_test.mp4";
 
-const API_KEY = import.meta.env.VITE_BLAND_API_KEY;
+const API_KEY = import.meta.env.BLAND_API_KEY;
 
 const PhoneInput = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
