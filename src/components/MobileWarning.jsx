@@ -14,7 +14,7 @@ const MobileWarning = () => {
         <div className="flex items-center justify-center space-x-2">
           <img src={appleLogo} alt="Apple Logo" className="h-6 w-6" />
           <span className="font-mac">
-            Please visit on a desktop device like a laptop or your computer
+            Please visit on a desktop device like a laptop or your computer.
           </span>
         </div>
       </div>
