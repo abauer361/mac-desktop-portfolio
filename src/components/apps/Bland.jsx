@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import blandVideo from "../../videos/blanddots_test.mp4";
 
-const API_KEY = import.meta.env.BLAND_API_KEY;
-
 const PhoneInput = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
 
@@ -42,22 +40,30 @@ const PhoneInput = () => {
 
   const callNumber = (phoneNumber) => {
     console.log(phoneNumber);
-    const options = {
+
+    fetch("/api/bland-call", {
       method: "POST",
       headers: {
-        authorization: API_KEY,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        pathway_id: "6833b62e-b9ee-4a15-b7af-349e83fd848a",
-        phone_number: phoneNumber,
+        phoneNumber: phoneNumber,
       }),
-    };
-
-    fetch("https://api.bland.ai/v1/calls", options)
+    })
       .then((response) => response.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.error(err));
+      .then((data) => {
+        if (data.error) {
+          console.error("Error:", data.error);
+          alert("Failed to initiate call: " + data.error);
+        } else {
+          console.log("Call initiated:", data);
+          alert("Call initiated successfully!");
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Failed to initiate call");
+      });
   };
 
   const handleKeyPress = (e) => {
