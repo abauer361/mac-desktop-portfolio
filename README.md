@@ -20,3 +20,5 @@ Add:
 
 - To set up: https://www.youtube.com/watch?v=PfZ4oLftItk
 - npm install @vis.gl/react-google-maps
+
+Inspiration from: https://github.com/vivek9patel/vivek9patel.github.io
