@@ -9,7 +9,6 @@ const Poker = () => {
         src="https://html5.gamedistribution.com/80cf8e94d5af458e822afc6c9f5766e0/?gd_sdk_referrer_url=https://www.example.com/games/poker-with-friends"
         className="w-full h-full border-0"
         scrolling="none"
-        frameBorder="0"
       ></iframe>
     </>
   );
