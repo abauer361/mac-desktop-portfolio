@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         pathway_id: "6833b62e-b9ee-4a15-b7af-349e83fd848a",
         phone_number: phoneNumber,
-        voice: "june",
+        voice: "alena",
       }),
     });
 
