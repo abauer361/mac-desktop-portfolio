@@ -7,4 +7,8 @@ export const topBarNames = [
     label: "VS Code",
     name: "Visual Studio Code",
   },
+  {
+    label: "Handwriting",
+    name: "Handwriting Analyzer",
+  },
 ];

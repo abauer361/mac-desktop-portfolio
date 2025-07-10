@@ -16,6 +16,7 @@ import chess from "./chess.png";
 import poker from "./poker.png";
 import linkedin from "./linkedin.png";
 import bland from "./bland.png";
+import handwriting from "./handwriting.png";
 
 export {
   contacts,
@@ -35,4 +36,5 @@ export {
   poker,
   linkedin,
   bland,
+  handwriting,
 };
