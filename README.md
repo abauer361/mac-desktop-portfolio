@@ -166,9 +166,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-Vivek Patel - For the incredible inspiration and original concept
-Cursor - For being an amazing coding companion
-The React community - For making web development actually enjoyable
+- Vivek Patel: For the incredible inspiration and original concept
+- Cursor: For being an amazing coding companion
+- The React community: For making web development actually enjoyable
 
 ---
 
