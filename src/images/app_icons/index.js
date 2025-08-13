@@ -13,7 +13,7 @@ import trashcan from "./trashcan.svg";
 import vsc from "./vsc.svg";
 import nike from "./nike.svg";
 import chess from "./chess.png";
-import poker from "./poker.png";
+// import poker from "./poker.png";
 import linkedin from "./linkedin.png";
 import bland from "./bland.png";
 import handwriting from "./handwriting.png";
@@ -33,7 +33,7 @@ export {
   vsc,
   nike,
   chess,
-  poker,
+  // poker,
   linkedin,
   bland,
   handwriting,

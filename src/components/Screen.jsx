@@ -9,7 +9,7 @@ import {
   Chess,
   Safari,
   Andrew,
-  Poker,
+  // Poker,
   Terminal,
   Notes,
   Trash,
@@ -37,8 +37,8 @@ const Screen = ({ app }) => {
       return <Safari />;
     case "About Andrew":
       return <Andrew />;
-    case "Poker":
-      return <Poker />;
+    // case "Poker":
+    //   return <Poker />;
     case "Terminal":
       return <Terminal />;
     case "Notes":

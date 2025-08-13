@@ -1,8 +1,8 @@
 Add:
-- An icon (png, jpg, svg) in app_icons
-- Include in app_icons/index.js import & export
+- An icon (png, jpg, svg) in src/images/app_icons
+- Include in src/images/app_icons/index.js import & export
 - Include label in constants/index.js export & icon image to import
-- Build a component in components/apps for the app
-- Include the component in apps/index.js
-- Add to Screen.jsx as an option
+- Build a component in src/components/apps for the app
+- Include the component in src/components/apps/index.js
+- Add to src/components/Screen.jsx as an option
 - If you want to change the titleBar name, add it to src/index.js

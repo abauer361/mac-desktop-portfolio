@@ -7,7 +7,7 @@ import Nike from "./Nike.jsx";
 import Chess from "./Chess.jsx";
 import Safari from "./Safari.jsx";
 import Andrew from "./About Andrew/Andrew.jsx";
-import Poker from "./Poker.jsx";
+// import Poker from "./Poker.jsx";
 import Terminal from "./Terminal.jsx";
 import Notes from "./Notes/Notes.jsx";
 import Trash from "./Trash Can/Trash.jsx";
@@ -25,7 +25,7 @@ export {
   Chess,
   Safari,
   Andrew,
-  Poker,
+  // Poker,
   Terminal,
   Notes,
   Trash,

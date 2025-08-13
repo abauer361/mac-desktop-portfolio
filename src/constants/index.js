@@ -15,7 +15,7 @@ import {
   vsc,
   nike,
   chess,
-  poker,
+  // poker,
   linkedin,
   bland,
   handwriting,
@@ -83,10 +83,10 @@ export const desktopApps = [
     photo: chess,
     label: "Chess",
   },
-  {
-    photo: poker,
-    label: "Poker",
-  },
+  // {
+  //   photo: poker,
+  //   label: "Poker",
+  // },
   {
     photo: nike,
     label: "Nike",
