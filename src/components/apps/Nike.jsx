@@ -9,7 +9,7 @@ const Nike = () => {
 
   return (
     <iframe
-      src="https://nike-website-ecru-eight.vercel.app"
+      src="https://tailwind.andrew-bauer.com/"
       className="w-full h-full"
     />
   );
