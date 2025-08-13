@@ -1,15 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/nike/:path*",
-        "destination": "https://nike.andrew-bauer.com/"
-      }
-    ],
-    "redirects": [
-      {
-        "source": "/nike",
-        "destination": "https://nike.andrew-bauer.com",
-        "permanent": true
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/tailwind/:path*",
+      "destination": "https://tailwind.andrew-bauer.com/"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/tailwind",
+      "destination": "https://tailwind.andrew-bauer.com/",
+      "permanent": true
+    }
+  ]
+}

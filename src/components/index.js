@@ -1,7 +1,7 @@
 export const topBarNames = [
   {
     label: "Nike",
-    name: "Nike - Checkout nike.andrew-bauer.com",
+    name: "Nike - Checkout tailwind.andrew-bauer.com",
   },
   {
     label: "VS Code",
