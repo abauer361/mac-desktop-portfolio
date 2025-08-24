@@ -5,6 +5,7 @@ import Dock from "./components/Dock";
 import Desktop from "./components/Desktop";
 import MobileWarning from "./components/MobileWarning.jsx";
 import { useIsMobile } from "./hooks/useIsMobile";
+import Intercom from "./components/Intercom/Intercom";
 
 function App() {
   const isMobile = useIsMobile();
@@ -22,6 +23,7 @@ function App() {
       <section className="fixed bottom-4 left-1/2 -translate-x-1/2 w-full flex justify-center z-0">
         <Dock />
       </section>
+      <Intercom />
     </>
   );
 }
