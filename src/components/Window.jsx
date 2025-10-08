@@ -177,7 +177,7 @@ const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
   return (
     <div
       ref={windowRef}
-      className="fixed bg-white rounded-lg shadow-lg border border-gray-300"
+      className="fixed bg-white rounded-lg shadow-lg border border-gray-300 select-none"
       style={{
         left: position.x,
         top: position.y,
