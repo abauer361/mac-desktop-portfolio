@@ -17,6 +17,7 @@ import chess from "./chess.png";
 import linkedin from "./linkedin.png";
 import bland from "./bland.png";
 import handwriting from "./handwriting.png";
+import veriff from "./veriff.png";
 
 export {
   contacts,
@@ -37,4 +38,5 @@ export {
   linkedin,
   bland,
   handwriting,
+  veriff,
 };

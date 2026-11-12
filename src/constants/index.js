@@ -18,7 +18,8 @@ import {
   // poker,
   linkedin,
   bland,
-  handwriting,
+  // handwriting,
+  veriff,
 } from "../images/app_icons";
 
 export const dockerApps = [
@@ -95,8 +96,12 @@ export const desktopApps = [
     photo: bland,
     label: "Bland",
   },
+  // {
+  //   photo: handwriting,
+  //   label: "Handwriting",
+  // },
   {
-    photo: handwriting,
-    label: "Handwriting",
+    photo: veriff,
+    label: "Veriff",
   },
 ];

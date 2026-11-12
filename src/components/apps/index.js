@@ -15,6 +15,7 @@ import Contacts from "./Contacts.jsx";
 import Photos from "./Photos.jsx";
 import Bland from "./Bland.jsx";
 import Handwriting from "./Handwriting.jsx";
+import Veriff from "./Veriff.jsx";
 
 export {
   Spotify,
@@ -33,4 +34,5 @@ export {
   Contacts,
   Bland,
   Handwriting,
+  Veriff,
 };

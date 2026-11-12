@@ -9,16 +9,47 @@ import closeX from "../images/window_controls/closeX.png";
 import Screen from "./Screen";
 import { topBarNames } from ".";
 
+// Sits under the menu bar and above the dock, so the embedded flow
+// opens already fitted to the desktop instead of a short default window.
+const veriffWindowLayout = () => {
+  const top = 36;
+  const side = 36;
+  const dockClearance = 108;
+  const width = Math.min(920, Math.max(680, window.innerWidth - side * 2));
+  const height = Math.min(
+    860,
+    Math.max(560, window.innerHeight - top - dockClearance)
+  );
+  return {
+    x: Math.max(side, Math.round((window.innerWidth - width) / 2)),
+    y: top,
+    width,
+    height,
+  };
+};
+
 const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
-  const [position, setPosition] = useState({
-    x: Math.random() * 165 + 35,
-    y: Math.random() * 155 + 65,
+  const [position, setPosition] = useState(() => {
+    if (title === "Veriff") {
+      const layout = veriffWindowLayout();
+      return { x: layout.x, y: layout.y };
+    }
+    return {
+      x: Math.random() * 165 + 35,
+      y: Math.random() * 155 + 65,
+    };
   });
   const [isDraggingBar, setIsDraggingBar] = useState(false);
   const [dragBarOffset, setDragBarOffset] = useState({ x: 0, y: 0 });
   const [isResizing, setIsResizing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [windowSize, setWindowSize] = useState({ width: 1000, height: 500 });
+  const [windowSize, setWindowSize] = useState(() => {
+    if (title === "Veriff") {
+      const layout = veriffWindowLayout();
+      return { width: layout.width, height: layout.height };
+    }
+    return { width: 1000, height: 500 };
+  });
   const [activeSizer, setActiveSizer] = useState(null);
   const windowRef = useRef(null);
 
@@ -216,9 +247,15 @@ const Window = ({ isOpen, title, onClose, zInd, onFocus }) => {
           className="absolute leftSizer bg-gray-200 w-[10px] h-full -translate-x-[2px] -translate-y-[37px] cursor-w-resize rounded"
           onMouseDown={handleResize}
         />
-        <div className="w-[calc(100%-18px)] flex screenSection items-center justify-center h-[calc(100%-44px)] translate-x-2 overflow-hidden">
-          <Screen app={title} />
-        </div>
+        {title === "Veriff" ? (
+          <div className="absolute inset-x-2 bottom-1.5 top-9 overflow-hidden">
+            <Screen app={title} />
+          </div>
+        ) : (
+          <div className="flex h-[calc(100%-44px)] w-[calc(100%-18px)] translate-x-2 screenSection items-center justify-center overflow-hidden">
+            <Screen app={title} />
+          </div>
+        )}
         <section
           className="absolute rightSizer bg-gray-200 right-0 w-[10px] h-[calc(100%-8px)] cursor-e-resize -translate-y-9 rounded"
           onMouseDown={handleResize}

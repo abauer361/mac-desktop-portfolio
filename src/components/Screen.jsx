@@ -17,6 +17,7 @@ import {
   Photos,
   Bland,
   Handwriting,
+  Veriff,
 } from "./apps";
 
 const Screen = ({ app }) => {
@@ -53,6 +54,8 @@ const Screen = ({ app }) => {
       return <Bland />;
     case "Handwriting":
       return <Handwriting />;
+    case "Veriff":
+      return <Veriff />;
     default:
       return <div>App has not been created yet!</div>;
   }
